@@ -1,0 +1,8 @@
+/*
+    MaxFilesOpen default settings
+*/
+{
+ 
+    // Maximum number of tabs to have open
+    "maxtabs_tab_limit": 10
+}

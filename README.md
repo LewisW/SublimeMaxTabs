@@ -5,7 +5,7 @@ This plugin will close the least used tabs when more than the specified tabs are
 
 Installing
 ----------
-**Without Git:** Download the latest source from `GitHub <http://github.com/LewisW/SublimeMaxTabs>`_ and copy the whole directory into the Packages directory.
+**Without Git:** Download the latest source from `GitHub <http://github.com/LewisW/SublimeMaxTabs>` and copy the whole directory into the Packages directory.
 
 **With Git:** Clone the repository in your Sublime Text 2 Packages directory, located somewhere in user's "Home" directory::
 
@@ -16,12 +16,12 @@ The "Packages" packages directory is located at:
 
 * OS X::
 
-    ~/Library/Application Support/Sublime Text 2/Packages/
+    ~/Library/Application Support/Sublime Text 3/Packages/
 
 * Linux::
 
-    ~/.Sublime Text 2/Packages/
+    ~/.Sublime Text 3/Packages/
 
 * Windows::
 
-    %APPDATA%/Sublime Text 2/Packages/
+    %APPDATA%/Sublime Text 3/Packages/

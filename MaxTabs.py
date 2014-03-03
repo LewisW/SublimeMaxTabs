@@ -13,8 +13,8 @@ class MaxTabsListener(sublime_plugin.EventListener):
     max_tabs = 0
 
     def __init__(self):
-        settings = sublime.load_settings(__name__ + '.sublime-settings')
-        self.max_tabs = settings.get('maxtabs_tab_limit')
+        settings = sublime.load_settings('MaxTabs.sublime-settings')
+        self.max_tabs = settings.get('maxtabs_tab_limit', 10)
 
     def close_files(self):
         # Get the window
@@ -29,15 +29,15 @@ class MaxTabsListener(sublime_plugin.EventListener):
         for i in range(close):
             # Get the least used view
             least_used = self.least_used()
+            group = index = -1
 
-            group = index = 0
             for view in views:
                 if (view.id() == least_used):
                     sublime.active_window().focus_view(view)
                     (group, index) = window.get_view_index(view)
                     break
 
-            if (not index):
+            if (index < 0):
                 break
 
             sublime.active_window().run_command('close_by_index', {
@@ -82,8 +82,8 @@ class MaxTabsListener(sublime_plugin.EventListener):
         highest = highest_view_id = 0
 
         # Loop through all the open tabs
-        for view_id, born in self.tabs_alive_since.iteritems():
-            alive = (time.time() - born)
+        for view_id in self.tabs_alive_since:
+            alive = (time.time() - self.tabs_alive_since[view_id])
             active = self.tabs_active[view_id]
 
             if (alive != 0. and active != 0. and (alive / active) > highest):

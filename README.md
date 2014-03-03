@@ -7,7 +7,7 @@ Installing
 ----------
 **Without Git:** Download the latest source from `GitHub <http://github.com/LewisW/SublimeMaxTabs>` and copy the whole directory into the Packages directory.
 
-**With Git:** Clone the repository in your Sublime Text 2 Packages directory, located somewhere in user's "Home" directory::
+**With Git:** Clone the repository in your Sublime Text 3 Packages directory, located somewhere in user's "Home" directory::
 
     git clone git://github.com/LewisW/SublimeMaxTabs.git
 
